@@ -12,11 +12,4 @@ thresholds:
     warning: 50
     critical: 20
 
-alert:
-  email_enabled: true
-  email_to: "adrenjithkumarmr@gmail.com"
-  email_from: "monitor@example.com"
-  smtp_server: "smtp.gmail.com"
-  smtp_port: 587
-  smtp_user: "user"
-  smtp_password: "password"
+

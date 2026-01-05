@@ -1,82 +1,121 @@
-This project is a SD-WAN & WiFi analytics dashboard built using Python + Dash.
+📊 AI-Native Autonomous NOC (SD-WAN & Wi-Fi Analytics)
+🚀 Overview
 
-It shows how network data can be:
+This project demonstrates an AI-Native Network Operations Center (NOC) that:
 
-Visualized
+Detects anomalies proactively
 
-Analyzed
+Calculates network health scores
 
-Monitored
+Predicts SLA breaches
 
-Predicted (before SLA breaks)
+Performs root cause analysis
 
-Think of it as a mini NOC dashboard with intelligence.
+Recommends corrective actions
 
-2️⃣ What problems it solves
+Provides LLM-based explanations
 
-The dashboard helps answer:
+Designed for enterprise SD-WAN and Wi-Fi environments with safety and explainability.
 
-Is my network healthy right now?
+🧠 Key Capabilities
 
-Which sites are degraded or critical?
+✔ Anomaly Detection (Isolation Forest)
+✔ Site Health Scoring
+✔ SLA Breach Prediction (15–30 min)
+✔ Root Cause AI
+✔ Reinforcement Learning–style Recommendations
+✔ LLM-based NOC Copilot Context
+✔ Dash-based Visualization
 
-Are there early warning signals before SLA breaks?
+🏗 Architecture Layers
 
-Which KPIs are causing issues?
+Telemetry Ingestion
 
-3️⃣ Key features explained
-📊 Metrics visualization
+Latency, jitter, packet loss, throughput
 
-You see graphs for:
+Device and site context
 
-Latency
+AI/ML Intelligence
 
-Jitter
+anomaly_detection.py
 
-Packet loss
+health_score.py
 
-Throughput
+root_cause.py
 
-Each dot is:
+Decision Intelligence
 
-🟢 Green → Normal
+rl_decision.py
 
-🟠 Orange → Warning
+Safe, explainable recommendations
 
-🔴 Red → Critical
+Explainability Layer
 
-❌ Anomaly detection (important!)
+llm_context.py
 
-Some points show ❌.
+Incident summaries for operators
 
-This means:
+Visualization
 
-ML thinks this point is unusual
+Dash dashboard with KPIs & charts
 
-BUT it may not yet break SLA
+📂 Project Structure
+sdwan-wifi-analytics/
+│
+├── data/
+│   └── network_metrics.csv
+│
+├── scripts/
+│   ├── collect_data.py
+│   ├── anomaly_detection.py
+│   ├── health_score.py
+│   ├── root_cause.py
+│   ├── rl_decision.py
+│   └── llm_context.py
+│
+├── dashboard/
+│   └── app.py
+│
+├── README.md
+└── requirements.txt
 
-👉 This gives early warning, not noise.
+▶️ How to Run
+pip install -r requirements.txt
 
-🧠 Health Score
+python scripts/collect_data.py
+python scripts/anomaly_detection.py
+python scripts/health_score.py
+python scripts/root_cause.py
+python scripts/rl_decision.py
+python scripts/llm_context.py
 
-Each timestamp gets a health score (0–100):
+python dashboard/app.py
 
-80–100 → Healthy
 
-60–79 → Degraded
+Open browser:
 
-< 60 → Critical
+http://127.0.0.1:8050
 
-This combines multiple KPIs into one number.
+🧩 Design Philosophy
 
-⏳ SLA breach prediction
+No blind automation
 
-The dashboard predicts:
+Explain every AI decision
 
-“Is this site likely to break SLA in the next 15 minutes?”
+Enterprise-safe
 
-This appears as:
+Vendor neutral
 
-A KPI counter
+Future-ready for real-time streaming
 
-Risk shown on hover in charts
+🎯 Ideal Use Cases
+
+Enterprise NOC modernization
+
+SD-WAN observability
+
+Wi-Fi performance analytics
+
+AI Ops / NetOps transformation
+
+Architecture & principal engineer interviews
